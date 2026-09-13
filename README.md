@@ -2,11 +2,11 @@
 
 A guide to prayer spaces, masjids, halal butchers and restaurants across Greater Boston, for Muslims at MIT Sloan.
 
-Maintained by **MIT Sloan Muslims in Business (SMIB)**. Published at <https://smbc-sloan.github.io/>.
+Maintained by **MIT Sloan Muslims in Business (SMIB)**. Published at <https://smbc-sloan.github.io/guide/>.
 
 ## Deploying
 
-This is a GitHub **user site**: the repo is named `smbc-sloan.github.io`, so it serves from the root of the domain. GitHub Pages is set to deploy from `main` / `(root)`, and pushes go live within a minute or so. There is no build step — what's in the repo is what's served.
+This is a GitHub **project site**: the repo is `smbc-sloan/guide`, so it serves from `/guide/` on the club domain. GitHub Pages is set to deploy from `main` / `(root)`, and pushes go live within a minute or so. There is no build step — what's in the repo is what's served.
 
 ## What's here
 
