@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The SMIB Muslim Guide to MIT &amp; Boston</title>
+<meta name="description" content="Prayer spaces, masjids, halal butchers and restaurants across Greater Boston. A guide by MIT Sloan Muslims in Business.">
+<meta property="og:title" content="The SMIB Muslim Guide to MIT &amp; Boston">
+<meta property="og:description" content="Prayer spaces, masjids, halal butchers and restaurants across Greater Boston.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --crimson:#A31F34; --gold:#E0A827; --cream:#FAF4E7; --ink:#140F14;
+  --silver:#8A8B8C; --dgray:#555759; --lgray:#CAC8C8; --sapphire:#1C3A6E;
+  --bg:var(--cream); --surface:#FFFFFF; --text:var(--ink); --muted:var(--dgray);
+  --faint:var(--silver); --rule:var(--lgray); --link:var(--sapphire);
+  --shadow:0 1px 3px rgba(20,15,20,.07), 0 6px 18px rgba(20,15,20,.05);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#100C10; --surface:#1C171C; --text:#F4EFE4; --muted:#B9B4AC;
+    --faint:#8A8B8C; --rule:#332C33; --link:#8FB4E8;
+    --shadow:0 1px 3px rgba(0,0,0,.5), 0 6px 18px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:64px; -webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif;
+}
+.wrap{max-width:920px; margin:0 auto; padding:0 20px}
+
+/* ---------- header ---------- */
+header.hero{background:var(--ink); color:var(--cream); padding:56px 0 44px; position:relative; overflow:hidden}
+header.hero .wrap{position:relative; z-index:1}
+.kicker{font-size:12px; font-weight:700; letter-spacing:.18em; color:var(--gold); margin:0 0 18px}
+header.hero h1{font-size:clamp(30px,6.2vw,50px); line-height:1.1; margin:0 0 16px; font-weight:800; letter-spacing:-.5px}
+header.hero p.sub{font-size:clamp(15px,2.4vw,18px); color:#B9B4AC; margin:0 0 10px; max-width:34em}
+header.hero p.maps{font-size:14px; color:var(--gold); margin:0; font-style:italic}
+.motif{position:absolute; right:-70px; top:40px; width:300px; height:300px; opacity:.5; pointer-events:none}
+.motif svg{width:100%; height:100%}
+@media(max-width:760px){.motif{display:none}}
+
+/* ---------- nav ---------- */
+nav.toc{position:sticky; top:0; z-index:20; background:var(--bg);
+  border-bottom:1px solid var(--rule); overflow-x:auto; -webkit-overflow-scrolling:touch}
+nav.toc ul{display:flex; gap:4px; list-style:none; margin:0 auto; padding:0 14px; max-width:920px; white-space:nowrap}
+nav.toc a{display:block; padding:13px 10px; font-size:13px; font-weight:600;
+  color:var(--muted); text-decoration:none}
+nav.toc a:hover{color:var(--crimson)}
+
+/* ---------- sections ---------- */
+section{padding:46px 0 6px}
+.sectnum{font-size:12px; font-weight:700; letter-spacing:.16em; color:var(--gold); margin:0 0 8px}
+h2{font-size:clamp(23px,4vw,31px); line-height:1.2; margin:0 0 14px; font-weight:800; letter-spacing:-.3px}
+h3{font-size:18px; margin:34px 0 12px; font-weight:700}
+p{margin:0 0 14px; color:var(--muted)}
+p.lead{font-size:17px; color:var(--text)}
+a{color:var(--link)}
+a:hover{text-decoration:none}
+
+/* ---------- cards ---------- */
+.card{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:20px 22px; box-shadow:var(--shadow); margin:0 0 14px}
+.grid{display:grid; gap:14px; margin-bottom:14px}
+@media(min-width:700px){.grid.two{grid-template-columns:1fr 1fr} .grid.three{grid-template-columns:repeat(3,1fr)}}
+.card h4{margin:0 0 6px; font-size:16px; color:var(--crimson); font-weight:700}
+.card p{margin:0; font-size:14.5px}
+
+/* hero rooms */
+.room{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:24px; box-shadow:var(--shadow)}
+.room .code{font-size:36px; font-weight:800; letter-spacing:-1px; line-height:1; margin:0 0 8px}
+.room .type{font-size:11px; font-weight:700; letter-spacing:.13em; color:var(--gold); margin:0 0 10px}
+.room .where{font-size:15px; font-weight:700; margin:0 0 8px; color:var(--text)}
+.room p{font-size:14.5px; margin:0}
+
+/* callouts */
+.callout{background:var(--ink); color:var(--cream); border-radius:10px;
+  padding:20px 24px; margin:18px 0; font-size:17px; font-weight:700; line-height:1.45}
+.callout.red{background:var(--crimson)}
+.callout .small{display:block; font-size:14px; font-weight:400; margin-top:8px; opacity:.9}
+.note{font-size:13.5px; color:var(--faint); font-style:italic; margin:14px 0 0}
+
+/* big time */
+.bigtime{background:var(--crimson); color:var(--cream); border-radius:10px; padding:26px;
+  text-align:center; box-shadow:var(--shadow)}
+.bigtime .t{font-size:42px; font-weight:800; line-height:1; margin:0}
+.bigtime .l{font-size:11px; font-weight:700; letter-spacing:.16em; color:var(--gold); margin:10px 0 6px}
+.bigtime .r{font-size:16px; font-weight:700; margin:0}
+
+/* ---------- entry list (replaces tables - mobile friendly) ---------- */
+.entries{margin:0 0 10px}
+.entry{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:16px 18px; margin-bottom:10px; box-shadow:var(--shadow)}
+.entry .top{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+.entry .name{font-weight:700; font-size:16px; color:var(--text)}
+.entry .addr{display:block; font-size:14px; margin:5px 0 0}
+.entry .desc{font-size:14px; color:var(--muted); margin:8px 0 0; line-height:1.55}
+.tier{display:inline-flex; align-items:center; justify-content:center; min-width:20px; height:20px;
+  padding:0 6px; border-radius:10px; font-size:11px; font-weight:700; color:#fff; flex:none}
+.t1{background:var(--sapphire)} .t2{background:var(--gold); color:#3a2a00} .t3{background:var(--silver)}
+.warn{color:var(--crimson); font-weight:600}
+
+/* tier legend */
+.legend{display:flex; gap:16px; flex-wrap:wrap; font-size:13.5px; color:var(--muted); margin:0 0 18px}
+.legend span{display:flex; align-items:center; gap:7px}
+
+/* quick reference */
+.qr{background:var(--ink); color:var(--cream); border-radius:12px; padding:28px 26px; margin:18px 0}
+.qr h3{color:var(--gold); font-size:12px; letter-spacing:.16em; margin:0 0 18px; text-transform:uppercase}
+.qrgrid{display:grid; gap:22px}
+@media(min-width:640px){.qrgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.qrgrid{grid-template-columns:repeat(4,1fr)}}
+.qrcol h4{color:var(--gold); font-size:11px; letter-spacing:.12em; margin:0 0 12px;
+  padding-bottom:8px; border-bottom:1px solid #3a3340; text-transform:uppercase}
+.qrcol dl{margin:0}
+.qrcol dt{font-size:11.5px; color:var(--silver); margin:10px 0 1px}
+.qrcol dd{margin:0; font-size:14px; font-weight:700; color:var(--cream)}
+.qrcol dd a{color:var(--cream)}
+
+footer{border-top:1px solid var(--rule); margin-top:50px; padding:30px 0 60px}
+footer p{font-size:13px; color:var(--faint); margin:0 0 10px}
+
+@media print{
+  nav.toc{display:none} header.hero{padding:30px 0}
+  body{font-size:11pt} .entry,.card,.room{break-inside:avoid; box-shadow:none}
+  section{padding:18px 0 0} .motif{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="motif" aria-hidden="true">
+    <svg viewBox="0 0 100 100" fill="none" stroke="#E0A827" stroke-width="1">
+      <rect x="22" y="22" width="56" height="56"/>
+      <rect x="22" y="22" width="56" height="56" transform="rotate(45 50 50)"/>
+      <rect x="34" y="34" width="32" height="32"/>
+      <rect x="34" y="34" width="32" height="32" transform="rotate(45 50 50)"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <p class="kicker">MIT SLOAN MUSLIMS IN BUSINESS</p>
+    <h1>The SMIB Muslim Guide<br>to MIT &amp; Boston</h1>
+    <p class="sub">Prayer spaces, masjids, halal butchers and restaurants across Greater Boston.</p>
+    <p class="maps">Every address links straight to Google Maps.</p>
+  </div>
+</header>
+
+<nav class="toc">
+  <ul>
+    <li><a href="#msa">MIT MSA</a></li>
+    <li><a href="#prayer">Prayer at MIT</a></li>
+    <li><a href="#jummah">Jummah</a></li>
+    <li><a href="#masjids">Masjids</a></li>
+    <li><a href="#food">Halal Food</a></li>
+    <li><a href="#quick">Quick Reference</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<section id="intro">
+  <h2>Where do I pray, and where do I eat?</h2>
+  <p class="lead">Those are the first two practical questions every Muslim arriving at Sloan asks. This guide answers both.</p>
+  <p>It is written by Muslims at Sloan for Muslims at Sloan. Nothing here is official MIT policy — it is what we have figured out by living here. If something is wrong or out of date, tell the SMIB board so the next version fixes it.</p>
+</section>
+
+<!-- ============ 01 MSA ============ -->
+<section id="msa">
+  <p class="sectnum">01</p>
+  <h2>MIT MSA — join it alongside SMIB</h2>
+  <p>Where SMIB is your professional and social home inside Sloan, the <a href="https://msa.mit.edu">MIT Muslim Students Association</a> is where you find the rest of Muslim MIT: undergrads, PhD students, postdocs, visiting scholars and staff, plus community members from around Cambridge who pray on campus. It represents several hundred Muslims and runs programming year-round.</p>
+
+  <div class="grid three">
+    <div class="card">
+      <h4>Jumu'ah prayer</h4>
+      <p><strong>Every Friday, khutbah 1:15 PM</strong><br>MIT Musalla, W11-110</p>
+    </div>
+    <div class="card">
+      <h4>Connect</h4>
+      <p><strong>Every Friday, 5:30 PM (in term)</strong><br>Musalla — free dinner, topics suggested by attendees</p>
+    </div>
+    <div class="card">
+      <h4>Community gatherings</h4>
+      <p><strong>Varies year-round</strong><br>Dinners, socials, Ramadan iftars, educational programming</p>
+    </div>
+  </div>
+
+  <h3>How to plug in</h3>
+  <div class="entries">
+    <div class="entry"><span class="name">1 &nbsp;Subscribe to the mailing list</span>
+      <p class="desc">The single highest-value action for a new student — it is how iftar invitations and event announcements reach you. Sign up from the "Stay Connected" section of <a href="https://msa.mit.edu">msa.mit.edu</a>.</p></div>
+    <div class="entry"><span class="name">2 &nbsp;Save the prayer times</span>
+      <p class="desc">The MSA publishes live Adhan and Iqama times for the Musalla on MAWAQIT, linked from their prayer page.</p></div>
+    <div class="entry"><span class="name">3 &nbsp;Show up to Connect</span>
+      <p class="desc">Fridays at 5:30 PM with free dinner. The easiest low-stakes way in.</p></div>
+  </div>
+</section>
+
+<!-- ============ 02 PRAYER ============ -->
+<section id="prayer">
+  <p class="sectnum">02</p>
+  <h2>Prayer at MIT</h2>
+  <p class="lead">There are two prayer rooms inside the Sloan buildings. Most new students walk twelve minutes to W11 without knowing this.</p>
+
+  <div class="grid two">
+    <div class="room">
+      <p class="code" style="color:var(--crimson)">E52-112</p>
+      <p class="type">DEDICATED MUSLIM PRAYER ROOM</p>
+      <p class="where">Sloan Building E52, Room 112</p>
+      <p>Your default between classes. A purpose-designated Muslim prayer space — not a repurposed meditation room. Already oriented to qibla.</p>
+    </div>
+    <div class="room">
+      <p class="code" style="color:var(--sapphire)">E51-050</p>
+      <p class="type">MULTI-FAITH PRAYER &amp; MEDITATION</p>
+      <p class="where">Sloan Building E51, Room 050</p>
+      <p>Ground floor of E51, across from E52. Non-denominational, so you may be sharing the space with others.</p>
+    </div>
+  </div>
+
+  <div class="callout">If Dhuhr or Asr is called during a Sloan class, you do not need to cross campus.</div>
+  <p class="note">Praying in an empty conference room is normal and accepted at Sloan. Book it like any other room.</p>
+
+  <h3>The Musalla (W11-110)</h3>
+  <p>Daily prayers, Jumu'ah and all MSA programming happen here. It sits in <a href="https://www.google.com/maps/search/?api=1&amp;query=MIT%20Building%20W11%20Religious%20Activity%20Center%2C%2040%20Massachusetts%20Ave%2C%20Cambridge%20MA">Building W11, the Religious Activity Center</a>, on the west side of campus near the Student Center — roughly a ten to twelve minute walk from E52.</p>
+  <div class="grid three">
+    <div class="card"><h4>Wudu</h4><p>A dedicated area inside the building, with separate facilities for brothers and sisters. Bidets are also available in W11.</p></div>
+    <div class="card"><h4>Access</h4><p>Entry with your MIT ID. Locked overnight, roughly 1 AM to 4 AM.</p></div>
+    <div class="card"><h4>Qibla</h4><p>W11-110 and E52-112 are already oriented. Elsewhere, use a Qibla finder app.</p></div>
+  </div>
+  <p class="note">Wudu outside W11 means using standard restrooms. Bring a small towel and clean up — shared-restroom wudu is the most common source of friction with non-Muslim colleagues.</p>
+
+  <h3>Every prayer and quiet space on campus</h3>
+  <div class="entries">
+    <div class="entry"><div class="top"><span class="name">MIT Musalla</span></div>
+      <p class="desc"><strong>W11-110</strong> · Primary Muslim prayer space. Daily prayers, Jumu'ah and MSA programming. Wudu facilities on site.</p></div>
+    <div class="entry"><div class="top"><span class="name">Sloan — E52</span></div>
+      <p class="desc"><strong>E52-112</strong> · Dedicated Muslim prayer room. Inside the Sloan building.</p></div>
+    <div class="entry"><div class="top"><span class="name">Sloan — E51</span></div>
+      <p class="desc"><strong>E51-050</strong> · Multi-faith. Ground floor, across from E52.</p></div>
+    <div class="entry"><div class="top"><span class="name">Schwarzman College of Computing</span></div>
+      <p class="desc"><strong>45-204</strong> · Multi-faith prayer and meditation space.</p></div>
+    <div class="entry"><div class="top"><span class="name">Oasis, Hayden Library</span></div>
+      <p class="desc"><strong>Hayden, 2nd floor</strong> · Quiet space for reflection and prayer.</p></div>
+    <div class="entry"><div class="top"><span class="name">iHQ Innovation Headquarters</span></div>
+      <p class="desc"><strong>E38, 6th floor</strong> · Quiet space. After-hours access can be requested.</p></div>
+    <div class="entry"><div class="top"><span class="name">Walker Memorial</span></div>
+      <p class="desc"><strong>50-305</strong> · Quiet space for personal reflection, meditation and prayer.</p></div>
+    <div class="entry"><div class="top"><span class="name">MIT Chapel</span></div>
+      <p class="desc"><strong>W15</strong> · Non-denominational quiet space for personal reflection.</p></div>
+  </div>
+  <p class="note">Only W11-110 and E52-112 are dedicated Muslim prayer rooms; the rest are multi-faith or general quiet spaces. Source: <a href="https://msa.mit.edu">msa.mit.edu</a>.</p>
+</section>
+
+<!-- ============ 03 JUMMAH ============ -->
+<section id="jummah">
+  <p class="sectnum">03</p>
+  <h2>Jummah</h2>
+
+  <div class="grid two">
+    <div class="bigtime">
+      <p class="t">1:15 PM</p>
+      <p class="l">KHUTBAH BEGINS</p>
+      <p class="r">Room W11-110</p>
+    </div>
+    <div>
+      <h4 style="margin:0 0 4px;color:var(--crimson)">Finishes by 1:50 – 2:00 PM</h4>
+      <p style="font-size:14.5px">Budget the 1:00 to 2:15 block if you are walking back to Sloan afterwards.</p>
+      <h4 style="margin:14px 0 4px;color:var(--crimson)">Arrive on time</h4>
+      <p style="font-size:14.5px">The Musalla fills up — MIT students and community members from around Cambridge both attend. If the main room is full, there is an overflow room in the W11 dining room.</p>
+      <h4 style="margin:14px 0 4px;color:var(--crimson)">In winter, stay for Asr</h4>
+      <p style="font-size:14.5px">Asr comes in early, so attendees are invited to stay a few extra minutes after Jumu'ah to pray it.</p>
+    </div>
+  </div>
+
+  <h3>Friday 1:15 collides with class and recruiting — plan for it</h3>
+  <p>Friday early afternoon is prime time at Sloan: classes, recruiting events and club programming all land in the 1:00 to 2:30 window. The clash is predictable, which means it is manageable if you handle it at the start of term rather than the week of.</p>
+  <div class="entries">
+    <div class="entry"><span class="name">1 &nbsp;Check before you bid</span>
+      <p class="desc">Run your Friday early-afternoon slots against the 1:15 khutbah before you bid on or register for courses.</p></div>
+    <div class="entry"><span class="name">2 &nbsp;Email the professor early</span>
+      <p class="desc">A short, matter-of-fact note: you observe Friday congregational prayer, the exact window, and what you propose — a recording, notes from a classmate, making up participation. Most Sloan faculty are accommodating when asked early and specifically. Asking the week of is what makes it awkward.</p></div>
+    <div class="entry"><span class="name">3 &nbsp;Escalate patterns collectively</span>
+      <p class="desc">If several SMIB members hit the same recurring clash, raise it with the program office as a group rather than one by one.</p></div>
+  </div>
+  <p class="note">If you cannot make it to W11: <a href="https://www.google.com/maps/search/?api=1&amp;query=Islamic%20Society%20of%20Boston%2C%20204%20Prospect%20St%2C%20Cambridge%20MA%2002139">Islamic Society of Boston (ISB Cambridge), 204 Prospect St</a> — walkable from Central Square, about 15 minutes from Sloan. Check their current Jummah time before relying on it.</p>
+</section>
+
+<!-- ============ 04 MASJIDS ============ -->
+<section id="masjids">
+  <p class="sectnum">04</p>
+  <h2>Masjids in Greater Boston</h2>
+  <p class="lead">Campus covers daily prayer. Masjids cover Eid, Taraweeh, halaqas, nikah and janazah — and a community that is not all students.</p>
+
+  <h3>Closest, and the major centres</h3>
+  <div class="entries">
+    <div class="entry">
+      <div class="top"><span class="name">Islamic Society of Boston (ISB Cambridge)</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Islamic%20Society%20of%20Boston%2C%20204%20Prospect%20St%2C%20Cambridge%20MA%2002139">204 Prospect St, Cambridge, MA 02139</a>
+      <p class="desc">(617) 876-3546 · The closest masjid to campus, and the one with student roots — founded in 1981 out of the Muslim student groups at MIT, Harvard, BU, Northeastern and Tufts. Walkable from Central Square.</p>
+    </div>
+    <div class="entry">
+      <div class="top"><span class="name">Islamic Society of Boston Cultural Center (ISBCC)</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Islamic%20Society%20of%20Boston%20Cultural%20Center%2C%20100%20Malcolm%20X%20Blvd%2C%20Roxbury%20MA%2002120">100 Malcolm X Blvd, Roxbury, MA 02120</a>
+      <p class="desc">(617) 858-6114 · The largest mosque in New England, with roughly 1,700 at Friday prayers. Your Eid and Taraweeh destination. Orange Line to Roxbury Crossing.</p>
+    </div>
+    <div class="entry">
+      <div class="top"><span class="name">Mosque for the Praising of Allah</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Mosque%20for%20the%20Praising%20of%20Allah%2C%20724%20Shawmut%20Ave%2C%20Roxbury%20MA%2002119">724 Shawmut Ave, Roxbury, MA 02119</a>
+      <p class="desc">Boston's oldest masjid — historically significant and rooted in Boston's Black Muslim community.</p>
+    </div>
+    <div class="entry">
+      <div class="top"><span class="name">Yusuf Mosque</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Yusuf%20Mosque%2C%20186%20Chestnut%20Hill%20Ave%2C%20Brighton%20MA%2002135">186 Chestnut Hill Ave, Brighton, MA 02135</a>
+      <p class="desc">(617) 254-1939 · A community favourite, and convenient if you live in Brighton or Allston.</p>
+    </div>
+    <div class="entry">
+      <div class="top"><span class="name">Islamic Center of New England (ICNE)</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Islamic%20Center%20of%20New%20England%2C%20470%20South%20St%2C%20Quincy%20MA%2002169">470 South St, Quincy, MA 02169</a>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Islamic%20Center%20of%20New%20England%2C%2074%20Chase%20Dr%2C%20Sharon%20MA%2002067">74 Chase Dr, Sharon, MA 02067</a>
+      <p class="desc">Serving Greater Boston since 1964. Quincy is the historic location; Sharon is the larger suburban campus.</p>
+    </div>
+  </div>
+
+  <h3>Neighbourhood and suburban masjids</h3>
+  <div class="entries">
+    <div class="entry"><div class="top"><span class="name">Boston Islamic Center</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Boston%20Islamic%20Center%2C%202870%20Washington%20St%2C%20Roxbury%20MA%2002119">2870 Washington St, Roxbury, MA 02119</a></div>
+    <div class="entry"><div class="top"><span class="name">Masjid Al-Quran</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Masjid%20Al-Quran%2C%2035%20Intervale%20St%2C%20Boston%20MA%2002121">35 Intervale St, Boston, MA 02121 — Dorchester / Grove Hall</a></div>
+    <div class="entry"><div class="top"><span class="name">Alrowda Mosque</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Alrowda%20Mosque%2C%205%20Creston%20St%2C%20Dorchester%20MA%2002121">5 Creston St, Dorchester, MA 02121</a></div>
+    <div class="entry"><div class="top"><span class="name">Allston Brighton Islamic Center</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Allston%20Brighton%20Islamic%20Center%2C%20Allston%20MA">Allston, MA 02134 — open in Google Maps</a></div>
+    <div class="entry"><div class="top"><span class="name">Malden Islamic Center</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Malden%20Islamic%20Center%2C%20405%20Pearl%20St%2C%20Malden%20MA%2002148">405 Pearl St #1, Malden, MA 02148</a></div>
+    <div class="entry"><div class="top"><span class="name">Waltham Islamic Society</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Waltham%20Islamic%20Society%2C%20313%20Moody%20St%2C%20Waltham%20MA%2002453">313 Moody St, Waltham, MA 02453</a></div>
+  </div>
+
+  <div class="callout red">We have deliberately left prayer times out.
+    <span class="small">Jummah times, women's prayer space and parking vary by masjid and by season, and any times printed here would be wrong within a month. Call ahead or check the masjid's website.</span></div>
+  <p class="note">Scope: this guide covers Greater Boston. Further afield, there are established communities in Worcester, Portsmouth NH and across New England.</p>
+</section>
+
+<!-- ============ 05 FOOD ============ -->
+<section id="food">
+  <p class="sectnum">05</p>
+  <h2>Halal food</h2>
+  <p class="lead">Boston is expensive. Anyone here for two years will cook — so butchers come first.</p>
+
+  <h3>Where to buy halal meat</h3>
+  <div class="entries">
+    <div class="entry"><div class="top"><span class="name">Al-Hoda Market</span> <span style="font-size:12px;color:var(--faint)">CAMBRIDGE</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Al-Hoda%20Market%2C%20304%20Prospect%20St%2C%20Cambridge%20MA%2002139">304 Prospect St, Cambridge</a>
+      <p class="desc">Essentially next door to ISB Cambridge — pair a masjid visit with a grocery run.</p></div>
+    <div class="entry"><div class="top"><span class="name">Foodland</span> <span style="font-size:12px;color:var(--faint)">CAMBRIDGE</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Foodland%2C%202234%20Massachusetts%20Ave%2C%20Cambridge%20MA">2234 Massachusetts Ave, Cambridge</a>
+      <p class="desc">(617) 349-0009 · Halal meat and international groceries. North Cambridge, Red Line to Davis or Porter.</p></div>
+    <div class="entry"><div class="top"><span class="name">Hebron Market</span> <span style="font-size:12px;color:var(--faint)">MISSION HILL</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Hebron%20Market%2C%201522%20Tremont%20St%2C%20Boston%20MA%2002120">1522 Tremont St, Boston</a>
+      <p class="desc">(617) 238-7896 · <strong>Strongest recommendation.</strong> Full butcher — beef, lamb, poultry and goat, certified halal and sourced from local farms — plus Middle Eastern grocery. Open seven days.</p></div>
+    <div class="entry"><div class="top"><span class="name">International Halal Market</span> <span style="font-size:12px;color:var(--faint)">ROXBURY CROSSING</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=International%20Halal%20Market%2C%201433%20Tremont%20St%2C%20Roxbury%20Crossing%20MA%2002120">1433 Tremont St, Roxbury Crossing</a>
+      <p class="desc">Two minutes from Hebron Market and close to ISBCC. This stretch of Tremont is the halal grocery hub.</p></div>
+    <div class="entry"><div class="top"><span class="name">Garden Halal Meat</span> <span style="font-size:12px;color:var(--faint)">HAYMARKET</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Garden%20Halal%20Meat%2C%2096%20Blackstone%20St%2C%20Boston%20MA%2002109">96 Blackstone St, Boston</a>
+      <p class="desc">Butcher and fishmonger. Combine it with the Haymarket produce market.</p></div>
+    <div class="entry"><div class="top"><span class="name">Foodland Halal Market &amp; Cafe</span> <span style="font-size:12px;color:var(--faint)">MALDEN</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Foodland%20Halal%20Market%20and%20Cafe%2C%2011%20Highland%20Ave%2C%20Malden%20MA%2002148">11 Highland Ave, Malden</a>
+      <p class="desc">Flagged in the source list as the best of the group — the largest selection. Worth a car trip for bulk.</p></div>
+    <div class="entry"><div class="top"><span class="name">Sayar Market</span> <span style="font-size:12px;color:var(--faint)">REVERE</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Sayar%20Market%2C%203%20Everett%20St%2C%20Revere%20MA%2002151">3 Everett St #3E, Revere</a>
+      <p class="desc">Halal meat plus Burmese and South Asian groceries.</p></div>
+    <div class="entry"><div class="top"><span class="name">Waltham India Market</span> <span style="font-size:12px;color:var(--faint)">WALTHAM</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Waltham%20India%20Market%2C%20315%20Moody%20St%2C%20Waltham%20MA%2002453">315 Moody St, Waltham</a>
+      <p class="desc">South Asian groceries — two doors from Waltham Islamic Society.</p></div>
+  </div>
+
+  <div class="grid three">
+    <div class="card"><h4>Buying for Eid?</h4><p>Most of these butchers will do whole lamb or goat with about a week's notice.</p></div>
+    <div class="card"><h4>Start a group run</h4><p>A monthly SMIB run to Malden or Revere, split between a few students with a car, beats Cambridge retail.</p></div>
+    <div class="card"><h4>Always ask</h4><p>"Halal" on a US storefront is not a regulated claim. Ask about zabiha if that is your standard.</p></div>
+  </div>
+
+  <h3>How we tier the restaurants</h3>
+  <div class="callout red">The source list mixes fully halal restaurants with places where only one item is halal.
+    <span class="small">Publishing them as one undifferentiated list would be misleading, and could lead someone to eat something they would not choose to. So every restaurant below carries a tier.</span></div>
+  <div class="legend">
+    <span><i class="tier t1">1</i> Fully halal — the whole menu</span>
+    <span><i class="tier t2">2</i> Partially halal — specific items only</span>
+    <span><i class="tier t3">3</i> Safe to eat — no halal meat</span>
+  </div>
+
+  <h3>Cambridge — closest to Sloan</h3>
+  <div class="entries">
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">Jahunger</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Jahunger%2C%20272%20Brookline%20St%2C%20Cambridge%20MA%2002139">272 Brookline St, Cambridge</a>
+      <p class="desc">Uyghur, and Michelin-recognised. The standout on the entire list — take visiting family here.</p></div>
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">Silk Road Uyghur Cuisine</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Silk%20Road%20Uyghur%20Cuisine%2C%20645%20Cambridge%20St%2C%20Cambridge%20MA%2002141">645 Cambridge St, Cambridge</a>
+      <p class="desc">The other Uyghur option, in Inman Square. The Brookline branch has closed.</p></div>
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">Andala Coffee House</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Andala%20Coffee%20House%2C%20286%20Franklin%20St%2C%20Cambridge%20MA%2002139">286 Franklin St, Central Square</a>
+      <p class="desc">Palestinian-owned Middle Eastern cafe. Good for long study sessions.</p></div>
+    <div class="entry"><div class="top"><i class="tier t2">2</i><span class="name">Moona — Central Square</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Moona%20Central%20Square%2C%20750%20Main%20St%2C%20Cambridge%20MA%2002139">750 Main St, Cambridge</a>
+      <p class="desc">Upscale Middle Eastern, good for a nicer dinner. <span class="warn">Source note: "check if zabiha" — ask first.</span></p></div>
+    <div class="entry"><div class="top"><i class="tier t3">3</i><span class="name">Life Alive Organic Cafe</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Life%20Alive%20Organic%20Cafe%20Kendall%20Square%2C%20415%20Main%20St%2C%20Cambridge%20MA%2002142">415 Main St, Kendall Square</a>
+      <p class="desc">Vegetarian, and the closest of all of these to Sloan. The reliable fallback when a team lunch has to work for everyone.</p></div>
+    <div class="entry"><div class="top"><i class="tier t2">2</i><span class="name">India Pavilion</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=India%20Pavilion%2C%2017%20Central%20Square%2C%20Cambridge%20MA%2002139">17 Central Sq, Cambridge</a>
+      <p class="desc"><span class="warn">Source note: non-zabiha.</span></p></div>
+  </div>
+
+  <h3>Boston — downtown, Fenway and Longwood</h3>
+  <div class="entries">
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">The Halal Guys — Fenway</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Halal%20Guys%2C%201260%20Boylston%20St%2C%20Boston%20MA%2002215">1260 Boylston St, Boston</a>
+      <p class="desc">The reliable default. Near Fenway Park.</p></div>
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">The Halal Guys — Theater District</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Halal%20Guys%2C%20137%20Stuart%20St%2C%20Boston%20MA%2002116">137 Stuart St, Boston</a>
+      <p class="desc">The downtown branch.</p></div>
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">Black Seed Halal Grill</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Black%20Seed%20Halal%20Grill%2C%20140%20Tremont%20St%2C%20Boston%20MA%2002111">140 Tremont St, Boston</a>
+      <p class="desc">Has a prayer space in the basement — ask the receptionist.</p></div>
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">Bab Al-Yemen</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Bab%20Al-Yemen%2C%20468%20Commonwealth%20Ave%2C%20Boston%20MA%2002215">468 Commonwealth Ave, Boston</a>
+      <p class="desc">Yemeni, and a Best of Boston winner. Source note: "food is awesome."</p></div>
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">Istanbul Doner Burrito</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Istanbul%20Doner%20Burrito%2C%20350%20Longwood%20Ave%2C%20Boston%20MA%2002115">350 Longwood Ave, Boston</a>
+      <p class="desc">Convenient for anyone with classes or a partner at Longwood or HMS.</p></div>
+    <div class="entry"><div class="top"><i class="tier t2">2</i><span class="name">Gene's Chinese Flatbread Cafe</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Genes%20Chinese%20Flatbread%20Cafe%2C%2086%20Bedford%20St%2C%20Boston%20MA%2002111">86 Bedford St, Chinatown</a>
+      <p class="desc"><span class="warn">Only the lamb is halal, and the restaurant serves pork.</span></p></div>
+  </div>
+
+  <h3>Allston, Brighton and the suburbs</h3>
+  <div class="entries">
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">Halal Eatz</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Halal%20Eatz%2C%20195%20Cambridge%20St%2C%20Burlington%20MA%2001803">195 Cambridge St, Burlington</a>
+      <p class="desc">The highest-rated halal spot on the list — 4.9 stars from 2,000+ reviews. <span class="warn">Name trap: it is on Cambridge Street in Burlington, not in Cambridge.</span></p></div>
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">Turkish Lazuri Cafe</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Turkish%20Lazuri%20Cafe%2C%201%20N%20Beacon%20St%2C%20Allston%20MA%2002134">1 N Beacon St, Allston</a>
+      <p class="desc">Turkish, halal, and open late. There is a related bakery nearby.</p></div>
+    <div class="entry"><div class="top"><i class="tier t1">1</i><span class="name">Boston Kebab</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Boston%20Kebab%2C%20146%20Lexington%20St%2C%20Waltham%20MA%2002452">146 Lexington St, Waltham</a>
+      <p class="desc">Pair it with a visit to Waltham Islamic Society.</p></div>
+    <div class="entry"><div class="top"><i class="tier t2">2</i><span class="name">Nakhon Southern Thai</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Nakhon%20Southern%20Thai%2C%20296%20Washington%20St%2C%20Brighton%20MA%2002135">296 Washington St, Brighton</a>
+      <p class="desc">Has a prayer space near the cashier.</p></div>
+    <div class="entry"><div class="top"><i class="tier t2">2</i><span class="name">Happy Lamb Hot Pot</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Happy%20Lamb%20Hot%20Pot%2C%20138%20Brighton%20Ave%2C%20Allston%20MA%2002134">138 Brighton Ave, Allston</a>
+      <p class="desc"><span class="warn">Only the lamb is halal</span> — ask for the mushroom or vegetable broth.</p></div>
+    <div class="entry"><div class="top"><i class="tier t3">3</i><span class="name">Butternut Bakehouse</span></div>
+      <a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=Butternut%20Bakehouse%2C%20787%20Massachusetts%20Ave%2C%20Arlington%20MA%2002476">787 Massachusetts Ave, Arlington</a>
+      <p class="desc">Malaysian-owned bakery.</p></div>
+  </div>
+  <p class="note">Chains worth knowing:
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Daves%20Hot%20Chicken%2C%20Boston%20MA">Dave's Hot Chicken</a> (three locations — halal status varies by franchise, so verify each),
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Chicken%20and%20Rice%20Guys%2C%20Boston%20MA">Chicken And Rice Guys</a> (storefronts and food trucks),
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Krispy%20Krunchy%20Chicken%2C%20Boston%20MA">Krispy Krunchy Chicken</a>, and
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Luxor%20Cafe%2C%20Boston%20MA">Luxor Cafe</a> (not all zabiha).
+    Out of scope: Tasya's Kitchen appears on the source list but is in Somersworth, New Hampshire.</p>
+
+  <h3>Bonus: prayer spaces hiding in plain sight</h3>
+  <p>Some of the most useful information here — prayer spaces inside venues you would never think to ask at.</p>
+  <div class="entries">
+    <div class="entry"><div class="top"><span class="name"><a href="https://www.google.com/maps/search/?api=1&amp;query=Smith%20Campus%20Center%2C%201350%20Massachusetts%20Ave%2C%20Cambridge%20MA%2002138">Harvard Smith Campus Center</a></span></div>
+      <p class="desc">Prayer space on the second floor. The art wing has restrooms with bidets — useful for wudu.</p></div>
+    <div class="entry"><div class="top"><span class="name"><a href="https://www.google.com/maps/search/?api=1&amp;query=Black%20Seed%20Halal%20Grill%2C%20140%20Tremont%20St%2C%20Boston%20MA%2002111">Black Seed Halal Grill</a></span></div>
+      <p class="desc">Musalla in the basement. Ask the receptionist.</p></div>
+    <div class="entry"><div class="top"><span class="name"><a href="https://www.google.com/maps/search/?api=1&amp;query=Nakhon%20Southern%20Thai%2C%20296%20Washington%20St%2C%20Brighton%20MA%2002135">Nakhon Southern Thai</a></span></div>
+      <p class="desc">Prayer space near the cashier.</p></div>
+    <div class="entry"><div class="top"><span class="name"><a href="https://www.google.com/maps/search/?api=1&amp;query=Brigham%20and%20Womens%20Hospital%2C%2075%20Francis%20St%2C%20Boston%20MA%2002115">Brigham &amp; Women's Hospital</a></span></div>
+      <p class="desc">Masjid for daily prayer on L102. Muslim prayer service Fridays at 1 PM in the Duncan Reid Conference Room, second floor. Call (617) 732-7480.</p></div>
+    <div class="entry"><div class="top"><span class="name"><a href="https://www.google.com/maps/search/?api=1&amp;query=Boston%20Childrens%20Hospital%20Hale%20Building%2C%20300%20Longwood%20Ave%2C%20Boston%20MA%2002115">Boston Children's Hospital</a></span></div>
+      <p class="desc">Multi-faith prayer room in the Hale Building, SK 1418.</p></div>
+  </div>
+</section>
+
+<!-- ============ QUICK REFERENCE ============ -->
+<section id="quick">
+  <p class="sectnum">06</p>
+  <h2>Quick reference</h2>
+  <div class="qr">
+    <h3>Screenshot this one</h3>
+    <div class="qrgrid">
+      <div class="qrcol"><h4>Prayer at MIT</h4><dl>
+        <dt>Musalla</dt><dd>W11-110</dd>
+        <dt>Sloan — Muslim</dt><dd>E52-112</dd>
+        <dt>Sloan — multi-faith</dt><dd>E51-050</dd>
+        <dt>Jummah</dt><dd>Fri 1:15 PM, W11-110</dd>
+        <dt>Overflow</dt><dd>W11 dining room</dd>
+      </dl></div>
+      <div class="qrcol"><h4>Masjids</h4><dl>
+        <dt>Cambridge</dt><dd>ISB, 204 Prospect St</dd>
+        <dt>Eid &amp; Taraweeh</dt><dd>ISBCC, 100 Malcolm X Blvd</dd>
+        <dt>Brighton</dt><dd>Yusuf, 186 Chestnut Hill Ave</dd>
+        <dt>Oldest in Boston</dt><dd>724 Shawmut Ave, Roxbury</dd>
+      </dl></div>
+      <div class="qrcol"><h4>Halal food</h4><dl>
+        <dt>Closest grocer</dt><dd>Al-Hoda, 304 Prospect St</dd>
+        <dt>Best butcher</dt><dd>Hebron, 1522 Tremont St</dd>
+        <dt>Biggest selection</dt><dd>Foodland Halal, Malden</dd>
+        <dt>Best restaurant</dt><dd>Jahunger, 272 Brookline St</dd>
+      </dl></div>
+      <div class="qrcol"><h4>Apps &amp; links</h4><dl>
+        <dt>Prayer times</dt><dd>MAWAQIT — MIT Musalla</dd>
+        <dt>Qibla</dt><dd>Google Qibla Finder</dd>
+        <dt>Halal reviews</dt><dd><a href="https://www.zabihah.com">zabihah.com</a></dd>
+        <dt>MIT MSA</dt><dd><a href="https://msa.mit.edu">msa.mit.edu</a></dd>
+        <dt>ISBCC</dt><dd><a href="https://isbcc.org">isbcc.org</a></dd>
+      </dl></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Maintained by MIT Sloan Muslims in Business.</strong> Refreshed annually — roughly a third of this content goes stale within two years, so if something is wrong, tell the board.</p>
+    <p>Sources: <a href="https://msa.mit.edu">MIT Muslim Students Association</a> · MIT Division of Student Life · the community-maintained "Halal &amp; Masjid Boston" Google Maps list compiled by Habibah Agianda, which carries its own standing caveat — <em>"halal or safe to eat — always ask for zabiha / cross-contamination"</em> · <a href="https://therevertproject.org/masjidboston">The Revert Project</a> · ISBCC, ICNE and Waltham Islamic Society · Yelp and Zabihah listings.</p>
+    <p>Nothing here is official MIT policy.</p>
+  </div>
+</footer>
+
+</body>
+</html>
