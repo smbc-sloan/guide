@@ -1,8 +1,8 @@
-# The SMIB Muslim Guide to MIT & Boston
+# The SMBC Muslim Guide to MIT & Boston
 
 A guide to prayer spaces, masjids, halal butchers and restaurants across Greater Boston, for Muslims at MIT Sloan.
 
-Maintained by **MIT Sloan Muslims in Business (SMIB)**. Published at <https://smbc-sloan.github.io/guide/>.
+Maintained by **MIT Sloan Muslims in Business Club (SMBC)**. Published at <https://smbc-sloan.github.io/guide/>.
 
 ## Deploying
 
@@ -37,7 +37,7 @@ Roughly a third of this content goes stale within two years. Each year, the boar
 - [ ] **MSA contact + mailing list link** — boards turn over every year
 - [ ] **Restaurant closures** — several entries on the source list have closed since it was compiled
 - [ ] **Halal status of chains** — especially Dave's Hot Chicken, which varies by franchise
-- [ ] **SMIB contact details** in the quick-reference section
+- [ ] **SMBC contact details** in the quick-reference section
 
 ## Restaurant tiering
 
